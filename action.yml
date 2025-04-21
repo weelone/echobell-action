@@ -8,5 +8,5 @@ branding:
   icon: "bell"
   color: "blue"
 runs:
-  using: "node16"
+  using: "node22"
   main: "index.js"
