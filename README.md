@@ -31,9 +31,9 @@ You can also set the webhook URL using the `WEBHOOK_URL` environment variable:
 
 ## Inputs
 
-| Input        | Description                           | Required | Default |
-|--------------|---------------------------------------|----------|---------|
-| webhook_url  | Webhook URL to send the notification to| No       | -       |
+| Input       | Description                             | Required | Default |
+| ----------- | --------------------------------------- | -------- | ------- |
+| webhook_url | Webhook URL to send the notification to | No       | -       |
 
 If `webhook_url` is not provided as an input, the action will look for a `WEBHOOK_URL` environment variable.
 
@@ -43,7 +43,7 @@ The action sends a POST request to the webhook URL with the following JSON paylo
 
 ```json
 {
-  "externalUrl": "https://github.com/owner/repo/actions/runs/123456"
+  "externalLink": "https://github.com/owner/repo/actions/runs/123456"
 }
 ```
 
@@ -58,12 +58,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Build
         run: |
           npm ci
           npm run build
-          
+
       - name: Send Notification
         uses: weelone/echobell-action@v1
         with:

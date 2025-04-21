@@ -21,7 +21,7 @@ async function run() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ externalUrl: runUrl }),
+      body: JSON.stringify({ externalLink: runUrl }),
     });
 
     if (!response.ok) {
