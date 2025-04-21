@@ -6,7 +6,7 @@ inputs:
     required: false
 branding:
   icon: "bell"
-  color: "blue"
+  color: "orange"
 runs:
   using: "node20"
   main: "index.js"
